@@ -10,12 +10,13 @@ public class UnquitableLoop {
     // 子线程是否需要运行
     private static boolean subthreadNeedRun = true;
     // private volatile static boolean subthreadNeedRun = true;
+
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(() -> {
-           while (subthreadNeedRun) {
+            while (subthreadNeedRun) {
 
-           }
-           System.out.println("子线程结束");
+            }
+            System.out.println("子线程结束");
         });
         t1.start();
         Thread.sleep(1000);
